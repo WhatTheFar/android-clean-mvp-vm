@@ -1,0 +1,117 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+def projectPropertiesFile = rootProject.file("project.properties");
+def projectProperties = new Properties()
+projectProperties.load(new FileInputStream(projectPropertiesFile))
+
+android {
+    compileSdkVersion Versions.compile_sdk
+    dataBinding {
+        enabled true
+    }
+    signingConfigs {
+        config {
+            keyAlias projectProperties['production_key_alias']
+            keyPassword projectProperties['production_key_password']
+            storeFile file(projectProperties['production_store_path'])
+            storePassword projectProperties['production_store_password']
+        }
+    }
+    defaultConfig {
+        applicationId Releases.application_id
+        minSdkVersion Versions.min_sdk
+        targetSdkVersion Versions.target_sdk
+        versionCode Releases.version_code
+        versionName Releases.version_name
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        // Enable Vector Support Library
+        vectorDrawables.useSupportLibrary = true
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        debug {
+            buildConfigField "String", "OPEN_WEATHER_API_KEY", "\"${projectProperties['release_open_weather_key']}\""
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "OPEN_WEATHER_API_KEY", "\"${projectProperties['release_open_weather_key']}\""
+        }
+    }
+    // Instead, use the bundle block to control which types of configuration APKs
+    // you want your app bundle to support.
+    bundle {
+        language {
+            // Specifies that the app bundle should not support
+            // configuration APKs for language resources. These
+            // resources are instead packaged with each base and
+            // dynamic feature APK.
+            enableSplit = false
+        }
+        density {
+            // This property is set to true by default.
+            enableSplit = true
+        }
+        abi {
+            // This property is set to true by default.
+            enableSplit = true
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+
+dependencies {
+    implementation project(Modules.domain)
+    implementation project(Modules.data)
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation Libraries.kotlin_stdlib
+
+    implementation SupportLibraries.appcompat_v7
+    implementation SupportLibraries.constraint_layout
+
+    implementation Libraries.lifecycle
+    kapt Libraries.lifecycle_compiler
+
+//    implementation JetpackLibraries.appcompat
+//    implementation JetpackLibraries.constraint_layout
+//    implementation JetpackLibraries.lifecycle
+
+//    implementation JetpackLibraries.ktx_core
+//    implementation JetpackLibraries.ktx_fragment
+//    implementation JetpackLibraries.ktx_lifecycle_viewmodel
+
+//    annotationProcessor "androidx.databinding:databinding-compiler:3.2.0-beta05"
+
+    testImplementation TestLibraries.junit
+    androidTestImplementation TestLibraries.android_test_runner
+    androidTestImplementation TestLibraries.android_test_espresso
+
+//    testImplementation JetpackTestLibraries.junit
+//    androidTestImplementation JetpackTestLibraries.android_test_runner
+//    androidTestImplementation JetpackTestLibraries.android_test_espresso
+
+    // Dagger core
+    implementation Libraries.dagger
+    implementation Libraries.dagger_android
+    kapt Libraries.dagger_compiler
+    kapt Libraries.dagger_android_compiler
+
+    // Timber
+    implementation Libraries.timber
+
+    // Retrofit
+    implementation Libraries.retrofit
+    implementation Libraries.gson_converter
+    implementation Libraries.rx_adapter
+    implementation Libraries.logging_interceptor
+
+    // RxJava & RxAndroid
+    implementation Libraries.rx_kotlin
+    implementation Libraries.rx_android
+}
