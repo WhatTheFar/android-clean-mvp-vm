@@ -42,4 +42,9 @@ class MainFragment : Fragment() {
 
         mPresenter.onInit(savedInstanceState, mViewModel)
     }
+
+    override fun onPause() {
+        super.onPause()
+        mPresenter.cleanUp()
+    }
 }

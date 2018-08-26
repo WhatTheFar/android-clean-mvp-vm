@@ -7,5 +7,6 @@ interface MainContract {
 
     interface Presenter {
         fun onInit(savedInstanceState: Bundle?, mainViewModel: MainViewModel)
+        fun cleanUp()
     }
 }
