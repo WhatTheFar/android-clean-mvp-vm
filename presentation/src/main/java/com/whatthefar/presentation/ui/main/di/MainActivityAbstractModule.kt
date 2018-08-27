@@ -1,6 +1,5 @@
 package com.whatthefar.presentation.ui.main.di
 
-import com.whatthefar.presentation.ui.main.MainActivity
 import com.whatthefar.presentation.ui.main.MainContract
 import com.whatthefar.presentation.ui.main.MainPresenter
 import dagger.Binds

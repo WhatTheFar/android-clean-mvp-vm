@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.iosched.shared.result
+package com.whatthefar.presentation.ui.common
 
-import com.google.samples.apps.iosched.shared.result.Result.Success
+import com.whatthefar.presentation.ui.common.Result.Success
 
 /**
  * A generic class that holds a value with its loading status.

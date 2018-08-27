@@ -1,6 +1,6 @@
 package com.whatthefar.data.repository
 
-import com.iseinc.data.cache.CacheTransformer
+import com.whatthefar.data.cache.CacheTransformer
 import com.whatthefar.data.api.OpenWeatherMapService
 import com.whatthefar.data.mapper.WeatherMapper
 import com.whatthefar.domain.model.Weather

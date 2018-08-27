@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import com.whatthefar.presentation.databinding.MainFragmentBinding
 import com.whatthefar.presentation.extension.getViewModel
 import dagger.android.support.AndroidSupportInjection
-import timber.log.Timber
 import javax.inject.Inject
 
 class MainFragment : Fragment() {

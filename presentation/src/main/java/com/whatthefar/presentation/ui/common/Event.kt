@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package com.google.samples.apps.iosched.shared.result
+package com.whatthefar.presentation.ui.common
 
-import androidx.lifecycle.Observer
+import android.arch.lifecycle.Observer
 
 /**
  * Used as a wrapper for data that is exposed via a LiveData that represents an event.
