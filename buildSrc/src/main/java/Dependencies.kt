@@ -11,7 +11,7 @@ object Releases {
 
 object Versions {
 
-    val kotlin = "1.2.60"
+    val kotlin = "1.2.61"
 
     // Android Config
     val compile_sdk = 28
@@ -34,12 +34,12 @@ object Versions {
     val inject = "1"
     val dagger = "2.16"
     val rx_java = "2.1.12"
-    val rx_android = "2.0.2"
-    val rx_kotlin = "2.2.0"
-    val timber = "4.7.0"
+    val rx_android = "2.1.0"
+    val rx_kotlin = "2.3.0"
+    val timber = "4.7.1"
 
     val retrofit = "2.4.0"
-    val logging_interceptor = "3.10.0"
+    val logging_interceptor = "3.11.0"
 
     val easy_permissions = "1.2.0"
     val rx_paper = "1.2.0"
