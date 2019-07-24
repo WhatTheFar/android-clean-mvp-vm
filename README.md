@@ -11,6 +11,8 @@ environment-specific variables on new lines in the form of `NAME=VALUE`.
 
 See [`project.example.properties`](https://github.com/WhatTheFar/android-clean-mvp-vm/blob/master/project.example.properties) for example.
 
+> Note: OpenWeatherMap APIs Key is required in the `project.properties` file. Please sign up at [openweathermap.org](https://openweathermap.org) and create an API key. Don't worry about pricing, it's free.
+
 ## Clean Architecture
 
 ![Clean Architecture](sample_images/clean_architecture.png)
