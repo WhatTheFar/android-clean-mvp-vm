@@ -6,6 +6,7 @@ dependencies {
     implementation Libraries.kotlin_stdlib
     implementation Libraries.inject
 
+    implementation Libraries.rx_java
     implementation Libraries.rx_kotlin
 }
 
