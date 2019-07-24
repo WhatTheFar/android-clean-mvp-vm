@@ -11,7 +11,7 @@ object Releases {
 
 object Versions {
 
-    val kotlin = "1.2.61"
+    val kotlin = "1.3.31"
 
     // Android Config
     val compile_sdk = 28
