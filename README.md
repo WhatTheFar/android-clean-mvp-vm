@@ -11,20 +11,20 @@ environment-specific variables on new lines in the form of `NAME=VALUE`.
 
 See [`project.example.properties`](https://github.com/WhatTheFar/android-clean-mvp-vm/blob/master/project.example.properties) for example.
 
-Clean Architecture
--
+## Clean Architecture
+
 ![Clean Architecture](sample_images/clean_architecture.png)
 
-Architectural approach
--
+## Architectural approach
+
 ![Clean Architecture Layers](sample_images/clean_architecture_layers.png)
 
-Architectural reactive approach
--
+## Architectural reactive approach
+
 ![Clean Architecture Layers Details](sample_images/clean_architecture_layers_details.png)
 
-Model-View-Presenter-ViewModel
--
+## Model-View-Presenter-ViewModel
+
 ![MVP-VM](sample_images/mvp-vm.png)
 
 ## References
@@ -39,13 +39,11 @@ Model-View-Presenter-ViewModel
 
 [CircleCI Android Documentation](https://circleci.com/docs/2.0/language-android/)
 
-Discussions
--
+## Discussions
 
 Refer to the issues section: https://github.com/WhatTheFar/android-clean-mvp-vm/issues
 
-License
--
+## License
 
     Copyright 2018 Jakpat Mingmongkolmitr
 
