@@ -1,7 +1,7 @@
 package com.whatthefar.presentation.ui.core
 
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.whatthefar.presentation.util.LocaleManager
 
 abstract class BaseActivity : AppCompatActivity() {

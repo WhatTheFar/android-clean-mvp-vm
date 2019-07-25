@@ -1,6 +1,6 @@
 package com.whatthefar.presentation.di
 
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.ViewModel
 import dagger.MapKey
 import kotlin.reflect.KClass
 

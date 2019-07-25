@@ -1,7 +1,7 @@
 package com.whatthefar.presentation.ui.main
 
-import android.arch.lifecycle.MutableLiveData
-import android.databinding.Bindable
+import androidx.lifecycle.MutableLiveData
+import androidx.databinding.Bindable
 import android.text.TextWatcher
 import android.view.View
 import com.whatthefar.presentation.BR

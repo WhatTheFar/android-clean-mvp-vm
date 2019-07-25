@@ -1,8 +1,8 @@
 package com.whatthefar.presentation.ui.main
 
 import android.annotation.SuppressLint
-import android.arch.lifecycle.LifecycleObserver
-import android.arch.lifecycle.LiveData
+import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.LiveData
 import android.os.Bundle
 import android.view.View
 import com.whatthefar.domain.usecase.FetchWeatherUseCase
