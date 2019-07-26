@@ -1,7 +1,7 @@
 package com.whatthefar.presentation.di.module
 
-import android.arch.lifecycle.ViewModel
-import android.arch.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.whatthefar.presentation.di.ViewModelKey
 import com.whatthefar.presentation.ui.core.DaggerViewModelFactory
 import com.whatthefar.presentation.ui.main.MainViewModel

@@ -1,6 +1,6 @@
 package com.whatthefar.presentation.network
 
-import android.arch.lifecycle.MutableLiveData
+import androidx.lifecycle.MutableLiveData
 
 /**
  * Extension function to push a failed event with an exception to the observing outcome

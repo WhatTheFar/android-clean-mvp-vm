@@ -79,13 +79,13 @@ dependencies {
     implementation Libraries.lifecycle
     kapt Libraries.lifecycle_compiler
 
-//    implementation JetpackLibraries.appcompat
-//    implementation JetpackLibraries.constraint_layout
-//    implementation JetpackLibraries.lifecycle
+    implementation JetpackLibraries.appcompat
+    implementation JetpackLibraries.constraint_layout
+    implementation JetpackLibraries.lifecycle
 
-//    implementation JetpackLibraries.ktx_core
-//    implementation JetpackLibraries.ktx_fragment
-//    implementation JetpackLibraries.ktx_lifecycle_viewmodel
+    implementation JetpackLibraries.ktx_core
+    implementation JetpackLibraries.ktx_fragment
+    implementation JetpackLibraries.ktx_lifecycle_viewmodel
 
 //    annotationProcessor "androidx.databinding:databinding-compiler:3.2.0-beta05"
 

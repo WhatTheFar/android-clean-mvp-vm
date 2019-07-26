@@ -1,8 +1,8 @@
 package com.whatthefar.presentation.extension
 
-import android.arch.lifecycle.*
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentActivity
+import androidx.lifecycle.*
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
 
 inline fun <reified T : ViewModel> FragmentActivity.getViewModel(viewModelFactory: ViewModelProvider.Factory): T {
     return ViewModelProviders.of(this, viewModelFactory)[T::class.java]
